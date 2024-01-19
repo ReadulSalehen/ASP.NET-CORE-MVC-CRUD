@@ -1,0 +1,22 @@
+﻿@model ProductCrudWeb.Models.Product
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<form asp-controller="Products" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="md-3">
+        <label for="txtCategory" class="form-label">Category</label>
+        <input type="text" class="form-control" id="txtCategory" asp-for="Category" />
+    </div>
+    <div class="md-3">
+        <label for="txtItemName" class="form-label">ItemName</label>
+        <input type="text" class="form-control" id="txtItemName" asp-for="ItemName" />
+    </div>
+    <div class="md-3">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form>
+
